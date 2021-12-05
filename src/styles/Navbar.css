@@ -1,0 +1,29 @@
+.nav-container{
+      height:5rem;
+      width:100%;
+      background-color: #87CEFA;
+      color:white;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      position:sticky;
+      top:0px;
+      z-index:1000;
+}
+
+.left-bar{
+      display: flex;
+      position:relative;
+}
+
+.left-bar > div{
+      margin:20px;
+}
+
+.right-bar{
+      display: flex;
+      position:relative;
+}
+.right-bar > div{
+      margin:20px;
+}

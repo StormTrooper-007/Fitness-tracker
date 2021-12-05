@@ -1,0 +1,10 @@
+input:disabled{
+      background-color:transparent;
+      border: none;
+      color: black;
+}
+
+li{
+      display: flex;
+      align-items: center;
+}
