@@ -40,7 +40,7 @@ export default function TrainingList() {
   const [note, setNote] = useState("");
   const [weight, setWeight] = useState(0);
   const [reps, setReps] = useState(0);
-  const [effort, setEffort] = useState({scale:"0-5"});
+  const [effort, setEffort] = useState("0-5");
 
   const dispatch = useDispatch();
   const trainings = useSelector(state => state.trainings);
@@ -74,32 +74,35 @@ export default function TrainingList() {
       return (
            <div>
                  <form className="form" onSubmit={submitHandler} type="submit" action="submit">
-                       <label htmlFor="">
-                             training:
-                             <input type="text" name="training" value={trainingValue}
+                       <label htmlFor="title" className="training">
+                             <p>Training:</p>
+                             <input type="text" value={trainingValue} placeholder="training..."
                               onChange={e => setTrainingValue(e.target.value)}/>
                        </label>
-                       <label htmlFor="">
-                             notes:
-                       <textarea type="text" name="notes" />
+                       <label htmlFor="notes" className="notes">
+                            <p>Notes:</p> 
+                       <textarea type="text" value={note}placeholder="notes..."
+                       onChange={e => setNote(e.target.value)}/>
                        </label>
-                       
+                  <div className="weight-reps-container">
                        <div className="weight">
-                             <button> - </button>
+                             <p>Weight: </p>
+                             <button type="button" disabled={weight <=0 && true} onClick={() => setWeight(prev => prev - 5)}> - </button>
                              <div>{weight}</div>
-                             <button> + </button>
+                             <button type="button" onClick={() => setWeight(prev => prev + 5)}> + </button>
+                       </div>
 
-                       </div>
                        <div className="reps">
-                       <button> - </button>
+                             <p>Reps: </p>
+                       <button type="button" disabled={reps <=0 && true} onClick={() => setReps(prev => prev - 5)}> - </button>
                              <div>{reps}</div>
-                        <button> + </button>
+                        <button type="button" onClick={() => setReps(prev => prev + 5)}> + </button>
                        </div>
-                  
+                  </div>
                   <div className="select-container">
-                   <label htmlFor="effort-scale">
-                         Effort-scale:
-                        <select value={effort} onChange={(e) => setEffort({scale:e.target.value})}>
+                   <label htmlFor="effort-scale" className="select">
+                         Effort-scale: {" "}
+                        <select value={effort} onChange={(e) => setEffort(e.target.value)}>
                               {options.map(option => (
                                     <option value={option.value}>{option.label}</option>
                               ))}
@@ -108,6 +111,9 @@ export default function TrainingList() {
                   </div>
             <button type="submit">submit</button>
                  </form>
+                 <div>
+                       <h4>chestday</h4>
+                 </div>
            </div>
       )
 }

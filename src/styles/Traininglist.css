@@ -1,0 +1,140 @@
+.form{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 80px;
+}
+
+.training{
+      margin-top: 20px;
+      margin-left: 15px;
+}
+
+.notes{
+      margin-top: 40px;
+      margin-left: 15px;
+}
+
+.training > p {
+     font-size: 20px;
+}
+
+.notes > p{
+      font-size: 20px;
+}
+
+.notes > textarea{
+      width: 500px;
+      height: 150px;
+      padding:20px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      resize: none;
+}
+
+.training > input{
+      border:none;
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 16px;
+      width: 500px;
+}
+
+.weight{
+      display: flex;
+      align-items: center;
+}
+
+.reps{
+      display: flex;
+      align-items: center;
+}
+
+.weight-reps-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding: 20px;
+}
+
+.weight>p{
+      right: 10px;
+      font-size: 20px;
+}
+
+.reps>p{
+      right: 10px;
+      font-size: 20px;
+}
+
+.weight > button{
+      border:2px solid blue;
+      background-color: white;
+      color: blue;
+      width: 25px;
+      height: 25px;
+      padding: 2px;
+}
+
+.weight > button:disabled{
+      border: 2px solid darkgray;
+      color: darkgray;
+}
+.reps > button{
+      border:2px solid blue;
+      background-color: white;
+      color: blue;
+      width: 25px;
+      height: 25px;
+      padding: 2px;
+}
+.reps > button:disabled{
+      border: 2px solid darkgray;
+      color: darkgray;
+}
+
+.reps{
+      right: 150px;
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+}
+
+.weight{
+      left: 150px;
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+}
+
+.select-container{
+      margin-top: 100px;
+      margin-left: 20px;
+}
+
+
+button[type="submit"]{
+      margin-top:50px;
+      margin-left: 400px;
+      width:200px;
+      left: 400px;
+      top: 180px;
+      border: none;
+      border-radius: 10px;
+      height: 40px;
+      font-size: 20px;
+      font-weight: 20px;
+}
+
+.select{
+      margin:10px;
+      display: none;
+      background-color: DodgerBlue;
+}
+
+
+
+
+

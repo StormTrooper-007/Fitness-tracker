@@ -6,6 +6,7 @@
       color:white;
       position: sticky;
       z-index: 999;
+      margin: 0;
 }
 
 .nav-left{
