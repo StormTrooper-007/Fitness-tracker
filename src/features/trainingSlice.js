@@ -10,6 +10,10 @@ const trainingSlice = createSlice({
                   const newTraining = {
                         id:Date.now(),
                         title:action.payload.title,
+                        note:action.payload.note,
+                        weight:action.payload.weight,
+                        reps:action.payload.reps,
+                        effort:action.payload.effort
                   };
                   state.push(newTraining);
             },

@@ -1,18 +1,50 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React, {useState} from 'react';
 import '../styles/Effortscale.css';
 
+
 export default function Effortscale() {
+
+      const options = [
+
+            {
+                  label:"0-5",
+                  value:"0-5"
+                  
+            },
+            {
+                  label:"6",
+                  value:"6"
+            },
+
+            {
+                  label:"7",
+                  value:"7"
+            },
+
+            {
+                  label:"8",
+                  value:"8"
+            },
+
+            {
+                  label:"9",
+                  value:"9"
+            },
+            {
+                  label:"10",
+                  value:"10"
+            }
+      ];
+      
       return (
             <div className="effort-container">
-                  <div>
-                        <h3>Effort scale</h3>
+                  <div className="select-container">
+                        <select>
+                              {options.map(option => (
+                                    <option value={option.value}>{option.label}</option>
+                              ))}
+                        </select>
                   </div>
-              <Button variant="outlined">0-5</Button>
-              <Button variant="outlined">6</Button>
-              <Button variant="outlined">7</Button>
-              <Button variant="outlined">8</Button>
-              <Button variant="outlined">9</Button>
             </div>
       )
 }

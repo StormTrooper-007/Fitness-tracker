@@ -1,13 +1,14 @@
 import {BrowserRouter as Router, Switch as Routes, Route} from 'react-router-dom';
-import Navbar from './components/Navbar';
+//import Effortscale from './components/Effortscale.js';
+import Navbar from './components/Navbar.jsx';
 import TrainingList from './components/TrainingList.jsx';
-import Sets from './components/Sets';
+// import TrainingList from './components/TrainingList.jsx';
+// import Sets from './components/Sets';
 import './styles/App.css';
 
 
 function App() {
   return (
-
     <Router>
       <Navbar/>
       <Routes>

@@ -1,0 +1,13 @@
+.effort-container{
+      display: flex;
+}
+input[type="button"]{
+      background-color: white;
+      border: 1px solid blue;
+      padding: 20px;
+      cursor: pointer;
+      margin: 10px;
+}
+input:focus{
+      background-color: #87CEFA !important;
+}
